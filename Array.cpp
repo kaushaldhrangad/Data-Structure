@@ -140,3 +140,25 @@ int removeDuplicates(vector<int> &arr, int n) {
 	}
 	return i+1;
 }
+
+
+//  Left Rotate an Array by One
+/*
+Input: 'a' = 5, 'arr' = [1, 2, 3, 4, 5]
+
+Output: [2, 3, 4, 5, 1]
+  */
+
+
+#include <bits/stdc++.h>
+using namespace std;
+vector<int> rotateArray(vector<int> &arr, int n) {
+  // Write your code here.
+
+  int temp = arr[0];
+  for (int i = 1; i < n; i++) {
+    arr[i - 1] = arr[i];
+  }
+  arr[n - 1] = temp;
+  return arr;
+}
