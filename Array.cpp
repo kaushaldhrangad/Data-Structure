@@ -115,3 +115,28 @@ int isSorted(int n, vector<int> a)
   }
   return true;
 }
+
+
+//  Remove Duplicates from Sorted Array
+/*
+
+Input:- 
+10
+1 2 2 3 3 3 4 4 5 5 
+
+Output:-
+5 (Answer)
+like this [1,2,3,4,5] (This is only for understanding.)
+
+*/
+int removeDuplicates(vector<int> &arr, int n) {
+	// Write your code here.
+	int i = 0;
+	for(int j=0; j<n; j++){
+		if(arr[i]!= arr[j]){
+			arr[i+1]= arr[j];
+			i++;
+		}
+	}
+	return i+1;
+}
